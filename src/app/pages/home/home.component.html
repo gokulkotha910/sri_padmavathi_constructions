@@ -1,0 +1,124 @@
+<section class="hero">
+  <div class="hero-image"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content" appScrollReveal>
+    <div class="eyebrow"><span></span> PETROL RETAIL INFRASTRUCTURE</div>
+    <h1>Building the <em>infrastructure</em> behind every journey.</h1>
+    <p>Specialists in petrol retail outlet construction, existing bunk upgradation and private civil works — built
+      around disciplined execution.</p>
+    <div class="hero-actions"><a routerLink="/projects" class="btn-primary">Explore Our Projects <i
+          class="bi bi-arrow-up-right"></i></a><a routerLink="/contact" class="btn-ghost">Discuss a Project <i
+          class="bi bi-chat-dots"></i></a></div>
+    <div class="hero-note"><i class="bi bi-shield-check"></i><span>Professional project execution • Responsive support •
+        Practical site delivery</span></div>
+  </div>
+  <div class="hero-bottom">
+    <div class="container stats">
+      <div><strong>{{ company.years }}</strong><span>Experience</span></div>
+      <div><strong>{{ company.projects }}</strong><span>Projects</span></div>
+      <div><strong>{{ company.locations }}</strong><span>Locations</span></div>
+      <div><strong>4</strong><span>Work Categories</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="container intro-grid">
+    <div appScrollReveal>
+      <div class="section-label">WHO WE ARE</div>
+      <h2>Construction expertise shaped around <span>petrol retail projects.</span></h2>
+    </div>
+    <div appScrollReveal>
+      <p class="lead">{{ company.description }}</p>
+      <p>From foundation-level execution to upgrading existing outlets, our website will present verified project
+        experience, capabilities and leadership in one clear corporate story.</p><a routerLink="/about"
+        class="text-link">Discover the company <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="section services-section">
+  <div class="container">
+    <div class="section-head" appScrollReveal>
+      <div>
+        <div class="section-label">WHAT WE DO</div>
+        <h2>Built for the <span>petrol bunk lifecycle.</span></h2>
+      </div><a routerLink="/services" class="outline-link">View all services <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+    <div class="service-grid">
+      <article class="service-card" *ngFor="let service of services; let i = index" appScrollReveal>
+        <div class="service-no">0{{ i + 1 }}</div>
+        <div class="icon-box"><i class="bi" [ngClass]="service.icon"></i></div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.short }}</p><a routerLink="/services">Learn more <i class="bi bi-arrow-up-right"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section project-section">
+  <div class="container">
+    <div class="section-head" appScrollReveal>
+      <div>
+        <div class="section-label">SELECTED PROJECTS</div>
+        <h2>Work that <span>speaks for itself.</span></h2>
+      </div><a routerLink="/projects" class="outline-link">View portfolio <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+    <div class="filter-row"><button *ngFor="let category of categories" [class.active]="activeCategory === category"
+        (click)="setCategory(category)">{{ category }}</button></div>
+    <div class="project-grid">
+      <article class="project-card" *ngFor="let project of filteredProjects()" appScrollReveal><a
+          [routerLink]="['/projects', project.slug]" class="project-image"><img [src]="project.image"
+            [alt]="project.title"><span>{{ project.category }}</span><i class="bi bi-arrow-up-right"></i></a>
+        <div class="project-body">
+          <div class="project-meta"><span><i class="bi bi-geo-alt"></i>{{ project.location }}</span><span>{{
+              project.year }}</span></div>
+          <h3>{{ project.title }}</h3>
+          <div class="project-value"><small>PROJECT VALUE</small><strong>{{ project.valuation }}</strong></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-section">
+  <div class="container split-cta">
+    <div appScrollReveal>
+      <div class="section-label gold">WHY US</div>
+      <h2>One team. One site. <span>One accountable execution story.</span></h2>
+      <p>We present verified capability, practical project information and clear communication — the things clients need
+        before starting a construction conversation.</p>
+    </div>
+    <div class="reason-list" appScrollReveal>
+      <div><i class="bi bi-check2-circle"></i><span>Execution-focused project management</span></div>
+      <div><i class="bi bi-check2-circle"></i><span>New construction & existing outlet upgrades</span></div>
+      <div><i class="bi bi-check2-circle"></i><span>Tender and private project experience</span></div>
+      <div><i class="bi bi-check2-circle"></i><span>Responsive project coordination</span></div><a routerLink="/contact"
+        class="btn-primary">Start a Conversation <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="section leadership-teaser">
+  <div class="container leader-grid">
+    <div class="leader-image" appScrollReveal><img [src]="company.md.image" [alt]="company.md.name">
+      <div class="leader-tag"><strong>{{ company.md.name }}</strong><span>{{ company.md.designation }}</span></div>
+    </div>
+    <div appScrollReveal>
+      <div class="section-label">LEADERSHIP</div>
+      <h2>Driven by experience. <span>Focused on execution.</span></h2>
+      <p>{{ company.md.bio }}</p><a routerLink="/leadership" class="text-link">Meet the leadership <i
+          class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <div>
+      <div class="section-label gold">START A PROJECT</div>
+      <h2>Planning a petrol retail project?</h2>
+      <p>Share the location, work type and scope. Let's start the conversation.</p>
+    </div><a routerLink="/contact" class="btn-primary">Discuss Your Project <i class="bi bi-arrow-up-right"></i></a>
+  </div>
+</section>

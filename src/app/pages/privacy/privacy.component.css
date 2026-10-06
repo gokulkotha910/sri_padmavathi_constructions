@@ -1,0 +1,1 @@
+.container{width:min(900px,calc(100% - 40px));margin:0 auto}.legal{padding:100px 0;min-height:60vh;background:#f7f8f6}.legal h1{font-size:55px;color:#0b2533}.legal h2{color:#0b2533;margin-top:35px}.legal p{color:#697980;line-height:1.8}@media(max-width:575px){.container{width:calc(100% - 28px)}.legal{padding:70px 0}.legal h1{font-size:40px}}

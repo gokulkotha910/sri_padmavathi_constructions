@@ -1,0 +1,133 @@
+.container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto
+}
+
+.page-hero {
+    padding: 105px 0 90px;
+    background: #0b2533;
+    color: white
+}
+
+.page-hero h1 {
+    font-size: clamp(40px, 5vw, 65px);
+    margin: 14px 0;
+    letter-spacing: -.04em
+}
+
+.page-hero h1 span {
+    color: #d99b2b
+}
+
+.page-hero p {
+    color: #b9c8cc;
+    max-width: 650px;
+    line-height: 1.8
+}
+
+.section {
+    padding: 100px 0
+}
+
+.leader-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 85px;
+    align-items: center
+}
+
+.photo img {
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 4/4.7;
+    object-fit: cover
+}
+
+.section h2 {
+    font-size: 48px;
+    color: #0b2533;
+    margin: 12px 0 3px
+}
+
+.section h3 {
+    margin: 0 0 20px;
+    color: #c28621;
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase
+}
+
+.section p {
+    color: #6b7b81;
+    line-height: 1.8
+}
+
+.lead {
+    font-size: 19px;
+    color: #314b56 !important
+}
+
+.btn {
+    display: inline-flex;
+    gap: 8px;
+    background: #0b2533;
+    color: white;
+    text-decoration: none;
+    padding: 13px 17px;
+    border-radius: 7px;
+    font-weight: 800;
+    font-size: 12px;
+    margin-top: 12px
+}
+
+.quote {
+    padding: 80px 0;
+    background: #d99b2b
+}
+
+.quote i {
+    font-size: 40px;
+    color: #0b2533
+}
+
+.quote blockquote {
+    font-size: clamp(25px, 4vw, 43px);
+    line-height: 1.15;
+    color: #0b2533;
+    max-width: 900px;
+    margin: 10px 0 0;
+    font-weight: 800;
+    letter-spacing: -.03em
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .7s
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: none
+}
+
+@media(max-width:800px) {
+    .leader-grid {
+        grid-template-columns: 1fr;
+        gap: 40px
+    }
+}
+
+@media(max-width:575px) {
+    .container {
+        width: calc(100% - 28px)
+    }
+
+    .section {
+        padding: 70px 0
+    }
+
+    .section h2 {
+        font-size: 38px
+    }
+}

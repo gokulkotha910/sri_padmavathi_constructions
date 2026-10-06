@@ -1,0 +1,30 @@
+<footer class="footer">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a class="brand" routerLink="/"><span class="brand-mark"></span><span><strong>SRI
+            PADMAVATHI CONSTRUCTIONS</strong></span></a>
+      <p>Petrol retail outlet construction, upgradation and private civil works with an execution-first approach.</p>
+      <div class="socials"><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#"
+          aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="Facebook"><i
+            class="bi bi-facebook"></i></a></div>
+    </div>
+    <div>
+      <h4>Quick Links</h4><a routerLink="/about">About Us</a><a routerLink="/services">Services</a><a
+        routerLink="/projects">Projects</a><a routerLink="/leadership">Leadership</a>
+    </div>
+    <div>
+      <h4>Services</h4><a *ngFor="let service of services" routerLink="/services">{{ service.title }}</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><i class="bi bi-geo-alt"></i> {{ company.location }}</p>
+      <p><i class="bi bi-telephone"></i> {{ company.phone }}</p>
+      <p><i class="bi bi-envelope"></i> {{ company.email }}</p><a class="footer-cta" routerLink="/contact">Discuss Your
+        Project <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container bottom-inner"><span>© {{ year }} {{ company.name }}. All rights reserved.</span><span><a
+          routerLink="/privacy-policy">Privacy</a> · <a routerLink="/terms">Terms</a></span></div>
+  </div>
+</footer>

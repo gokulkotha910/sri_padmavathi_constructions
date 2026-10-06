@@ -1,0 +1,38 @@
+import { Project } from '../models/project.model';
+
+export const COMPANY = {
+  name: 'Sri Padmavathi Constructions',
+  tagline: 'Petrol Retail Outlet Construction & Upgradation Specialists',
+  description: 'A construction-focused company delivering petrol retail outlet construction, existing bunk upgradation and private civil works with a practical, execution-first approach.',
+  phone: '+91 90000 00000',
+  email: 'info@sripadmavathiconstructions.com',
+  location: 'Andhra Pradesh / Telangana, India',
+  years: '15+',
+  projects: '80+',
+  locations: '25+',
+  experience: '15+ years',
+  md: {
+    name: 'Mr. Nadipalli Nandu Kiran',
+    designation: 'Managing Director',
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85',
+    bio: 'Nadipalli Nandu Kiran is the Managing Director of Sri Padmavathi Constructions, with a strong focus on delivering reliable construction solutions for petrol retail outlets and related infrastructure. Under his leadership, the company is focused on executing new petrol bunk construction, existing outlet upgradation, civil works, tender-based projects and private construction works. His approach emphasizes quality execution, effective project coordination, timely completion and a strong commitment to client requirements. With a vision of building long-term relationships through dependable workmanship and professional project management, he continues to guide the company towards sustainable growth and greater capabilities in the construction sector. His leadership focuses on maintaining high standards of quality, safety and execution across every project undertaken by the organization. Through Sri Padmavathi Constructions, Nadipalli Nandu Kiran aims to establish the company as a trusted name in petrol retail outlet construction and infrastructure development.'
+  }
+};
+
+export const SERVICES = [
+  { icon: 'bi-building-gear', title: 'New Petrol Bunk Construction', short: 'Foundation-to-finish execution within the approved project scope.', text: 'Construction support for new retail outlets, including civil execution, site development and associated works actually performed by the company.' },
+  { icon: 'bi-arrow-repeat', title: 'Existing Bunk Upgradation', short: 'Renovation and modernization for operating retail outlets.', text: 'Civil improvement and upgrade works that help existing outlets move toward a cleaner, safer and more modern customer environment.' },
+  { icon: 'bi-fuel-pump', title: 'Retail Outlet Civil Works', short: 'Forecourt and associated civil infrastructure.', text: 'Petrol retail outlet civil works such as forecourt, drainage, foundations, office/building works and other approved scopes.' },
+  { icon: 'bi-file-earmark-text', title: 'Tender / Contract Works', short: 'Execution of eligible contracted project scopes.', text: 'Tender and contract execution support for projects where the company is engaged to deliver defined construction scopes.' },
+  { icon: 'bi-house-gear', title: 'Private Petrol Bunk Projects', short: 'Construction and improvement works for private clients.', text: 'Private petrol-bunk construction and improvement projects tailored to client requirements and approved site plans.' },
+  { icon: 'bi-diagram-3', title: 'Commercial / Allied Civil Works', short: 'Additional construction capabilities based on project needs.', text: 'A flexible service category for verified commercial and allied civil capabilities offered by the company.' }
+];
+
+export const PROJECTS: Project[] = [
+  { id: 1, slug: 'retail-outlet-new-construction', title: 'Retail Outlet – New Construction', category: 'New Construction', brand: 'PSU Tender Project', location: 'Vijayawada, Andhra Pradesh', year: '2025', status: 'Completed', valuation: '₹1.85 Cr', duration: '8 months', scope: ['Site development', 'Foundation & civil works', 'Forecourt works', 'Drainage'], summary: 'Dummy project data showing how a new retail outlet can be presented with location, value, scope and completion details.', image: 'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1200&q=85', gallery: ['https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1400&q=85', 'https://images.unsplash.com/photo-1597008641621-0f0b0c4f1d65?auto=format&fit=crop&w=1400&q=85'], featured: true },
+  { id: 2, slug: 'existing-bunk-upgradation', title: 'Existing Bunk Modernization', category: 'Upgradation', brand: 'Retail Outlet Upgrade', location: 'Guntur, Andhra Pradesh', year: '2024', status: 'Completed', valuation: '₹72 Lakh', duration: '4 months', scope: ['Forecourt renovation', 'Civil improvements', 'Drainage', 'Finishing'], summary: 'Dummy upgrade project focused on improving an existing outlet without presenting unsupported client claims.', image: 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1200&q=85', gallery: ['https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1400&q=85'], featured: true },
+  { id: 3, slug: 'private-petrol-bunk', title: 'Private Petrol Bunk Development', category: 'Private Works', brand: 'Private Client', location: 'Hyderabad, Telangana', year: '2025', status: 'Completed', valuation: '₹1.20 Cr', duration: '7 months', scope: ['Foundation', 'Civil structure', 'Site paving', 'Finishing'], summary: 'Dummy private-work portfolio item. Replace with the approved client and project details before publishing.', image: 'https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1200&q=85', gallery: ['https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1400&q=85'], featured: true },
+  { id: 4, slug: 'contract-civil-works', title: 'Retail Outlet Civil Package', category: 'Tender Works', brand: 'Contract Works', location: 'Nellore, Andhra Pradesh', year: '2023', status: 'Completed', valuation: '₹95 Lakh', duration: '6 months', scope: ['Civil package', 'Foundations', 'Drainage', 'Site works'], summary: 'Dummy tender/contract project. Publish only after company approval of project/client wording.', image: 'https://images.unsplash.com/photo-1590664214088-8d4c3a2f0a8d?auto=format&fit=crop&w=1200&q=85', gallery: ['https://images.unsplash.com/photo-1590664214088-8d4c3a2f0a8d?auto=format&fit=crop&w=1400&q=85'], featured: false },
+  { id: 5, slug: 'retail-outlet-renovation', title: 'Retail Outlet Renovation', category: 'Upgradation', brand: 'Existing Outlet', location: 'Tirupati, Andhra Pradesh', year: '2023', status: 'Completed', valuation: '₹58 Lakh', duration: '3 months', scope: ['Renovation', 'Paving', 'Finishing', 'Drainage'], summary: 'Dummy renovation project demonstrating the before/after storytelling opportunity for the portfolio.', image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85', gallery: ['https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85'], featured: false },
+  { id: 6, slug: 'new-outlet-foundation', title: 'New Outlet Foundation Package', category: 'New Construction', brand: 'Private Client', location: 'Warangal, Telangana', year: '2024', status: 'Ongoing', valuation: '₹1.05 Cr', duration: '6 months', scope: ['Earthwork', 'Foundation', 'Civil works', 'Site development'], summary: 'Dummy ongoing project to demonstrate how current projects can be displayed separately.', image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85', gallery: ['https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=85'], featured: false }
+];

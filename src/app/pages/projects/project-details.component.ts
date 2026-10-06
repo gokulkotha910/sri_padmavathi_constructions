@@ -1,0 +1,2 @@
+import { Component } from '@angular/core'; import { ActivatedRoute } from '@angular/router'; import { CompanyDataService } from '../../core/services/company-data.service'; import { Project } from '../../core/models/project.model';
+@Component({selector:'app-project-details',templateUrl:'./project-details.component.html',styleUrls:['./project-details.component.css']}) export class ProjectDetailsComponent { project?:Project; constructor(route:ActivatedRoute,data:CompanyDataService){this.project=data.getProjectBySlug(route.snapshot.paramMap.get('slug') || '')} }

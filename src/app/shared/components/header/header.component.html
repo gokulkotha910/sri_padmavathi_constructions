@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="top-strip">
+    <div class="container top-inner">
+      <span><i class="bi bi-geo-alt"></i> {{ company.location }}</span>
+      <span class="top-contact"><i class="bi bi-envelope"></i> {{ company.email }}</span>
+      <span class="top-contact"><i class="bi bi-telephone"></i> {{ company.phone }}</span>
+    </div>
+  </div>
+  <nav class="navbar-wrap">
+    <div class="container nav-inner">
+      <a class="brand" routerLink="/" (click)="closeMenu()">
+        <span class="brand-mark"><i class="bi bi-fuel-pump-fill"></i></span>
+        <span><strong>SRI PADMAVATHI</strong><small>CONSTRUCTIONS</small></span>
+      </a>
+      <button class="menu-toggle" type="button" (click)="toggleMenu()" aria-label="Toggle navigation">
+        <i class="bi" [ngClass]="menuOpen ? 'bi-x-lg' : 'bi-list'"></i>
+      </button>
+      <div class="nav-links" [class.open]="menuOpen">
+        <a *ngFor="let item of navItems" [routerLink]="item.link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: item.link === '/'}" (click)="closeMenu()">{{ item.label }}</a>
+        <a class="nav-cta" routerLink="/contact" (click)="closeMenu()"><i class="bi bi-arrow-up-right"></i> Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+</header>

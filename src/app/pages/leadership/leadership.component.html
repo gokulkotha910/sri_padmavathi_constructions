@@ -1,0 +1,26 @@
+<section class="page-hero">
+    <div class="container">
+        <div class="section-label">LEADERSHIP</div>
+        <h1>Experience at the centre of <span>execution.</span></h1>
+        <p>The leadership section will use the approved MD biography, professional image and milestones supplied by the
+            company.</p>
+    </div>
+</section>
+<section class="section">
+    <div class="container leader-grid">
+        <div class="photo" appScrollReveal><img [src]="company.md.image" [alt]="company.md.name"></div>
+        <div appScrollReveal>
+            <!-- <div class="section-label">MANAGING DIRECTOR</div> -->
+            <h2>{{company.md.name}}</h2>
+            <h3>{{company.md.designation}}</h3>
+            <p class="lead">{{company.md.bio}}</p>
+            <a routerLink="/contact" class="btn">Start a Conversation
+                <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+<section class="quote">
+    <div class="container"><i class="bi bi-quote"></i>
+        <blockquote>“You don't build a business. You build people, and people build the business.”</blockquote>
+    </div>
+</section>
